@@ -1,0 +1,201 @@
+<html>
+	<head>
+	  <title>Credits - DBN</title>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	  <link rel="stylesheet" href="https://discordbots.glitch.me/april">
+	  <style>
+      body{
+        background: #fff;
+        color: black;
+      }
+      
+		@keyframes inFromLeft {
+	  0%{
+		  transform: translateX(-100%);
+	  }
+	  100%{
+		  transform: translateX(0);
+	  }
+  }
+  
+  @-webkit-keyframes inFromLeft {
+	  0%{
+		  transform: translateX(-100%);
+	  }
+	  100%{
+		  transform: translateX(0);
+	  }
+  }
+		@keyframes fadeIn {
+	  0%{
+		  opacity: 0;
+	  }
+	  100%{
+		  opacity: 1;
+	  }
+  }
+  
+  @-webkit-keyframes fadeIn {
+	  0%{
+		  opacity: 0;
+	  }
+	  100%{
+		  opacity: 1;
+	  }
+  }
+		@keyframes mover {
+	  0%{
+		  transform: translateY(-10px);
+	  }
+	  100%{
+		  transform: translateY(5px);
+	  }
+  }
+  
+  @-webkit-keyframes mover {
+	  0%{
+		  transform: translateY(-10px);
+	  }
+	  100%{
+		  transform: translateY(5px);
+	  }
+  }
+		.owner-avatar {
+		   height: 150px;
+		   width: 150px;
+		  border-radius: 50%;
+		  animation: mover 0.9s infinite alternate;
+		  opacity: 1;  
+		}
+		.owner-avatar:hover{
+		  opacity: 0.9;
+		  transition: 1s ease;
+		}
+		
+			  .dev-avatar:hover{
+		  opacity: 0.9;
+		  transition: 1s ease;
+		}
+		.owner-name{
+		  font-size: 20pt;
+		}
+		
+		.boss-avatar {
+		  box-shadow: 0 0 20px 1px #F50;
+		}
+		
+		.boss-name {
+		  text-shadow: 2px 1px 13px #821f1f;
+		}
+		
+		.dev-name{
+		  font-size: 20pt;
+		}
+  
+		.dev-avatar {
+			  height: 150px;
+			width: 150px;
+		  border-radius: 50%;
+		  animation: mover 0.9s infinite alternate;
+		  opacity: 1;
+      
+    .mod-name {
+		  font-size: 20pt;
+		}
+  
+		.mod-avatar {
+			  height: 150px;
+			width: 150px;
+		  border-radius: 50%;
+		  animation: mover 0.9s infinite alternate;
+		  opacity: 1;
+		}
+		.center {
+		  text-align: center;
+		}
+		body{
+		  animation: fadeIn alternate 0.9s;
+		}
+		.jumbotron{
+		  animation: inFromLeft alternate 0.9s;
+		}
+	  </style>
+	</head>
+	<body>
+	  <div class="jumbotron center" style="color: black">
+		<h1>
+      <center>
+		  <u>All credit goes to:</u>
+      </center>
+		</h1>
+	  </div>
+  <center>
+	<div class="center">
+	  
+  
+		  <h1>
+		  CEO / FOUNDER
+	  </h1>
+		  <div id="owners">
+		<% for(var i=0;i<owners.length;i++){ %>
+		  <div class="owner">
+			<img class="owner-avatar" src="<%= owners[i].user.displayAvatarURL %>">
+			<p class="owner-name"><%= owners[i].user.tag %></p> <!-- ...I mean, there is a You can. Code is in the "br"???you can just dont touch the code-->
+			<br>
+        <br>
+			<br>
+			</div>
+		<% } %>
+	  </div>
+	  <h1>
+		HEAD Developers
+	  </h1>
+	  <div id="hdevelopers"> 
+		<% for(var i2=0;i2<hdevelopers.length;i2++){ %>
+		<img class="dev-avatar" src="<%= hdevelopers[i2].user.displayAvatarURL %>">
+			<p class="dev-name"><%= hdevelopers[i2].user.tag %></p>
+				<% } %>
+			<br>  
+      	  <h1>
+		Developers
+	  </h1>
+	  <div id="developers">
+		<% for(var i2=0;i2<developers.length;i2++){ %>
+		<img class="dev-avatar" src="<%= developers[i2].user.displayAvatarURL %>">
+			<p class="dev-name"><%= developers[i2].user.tag %></p>
+			<br>
+		<% } %>
+	  </div>
+  </center>
+	  </div>
+    <center> 
+     <!--
+    <h1>
+      FULL CREDITS GOES TO
+    </h1>
+    <h2>
+       Web Administrators
+    </h2>
+<b>
+  <p>Andrew#6621</p>
+  <p>NicksWorld#7453</p>
+    </b>
+<h2>
+  Web Developers
+    </h2>   
+<b>
+  <p>Bolt#6938</p>
+  <p>DamonOnYT#5465</p>
+  <p>Deni#0274</p>
+  <p>Samplasion#7901</p>
+  <p>Gabitzuu.#1337</p>
+  <p>"Kolkies" | KolkiesDev#0001</p>
+  <p>Aceheliflyer#0950</p>
+    </b>
+      -->
+    </center>
+	</body>
+  </html>

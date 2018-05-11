@@ -1,0 +1,206 @@
+<html>
+	
+	<head>
+	  <title>Cookie Policy | DBN </title>
+	  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.discordapp.com/attachments/437556497380147212/437992357393203202/Guild.png">
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	  
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	  <meta name="viewport" content="width=device-width">
+	  <meta property="og:type" content="profile">
+	  <meta property="og:title" content="Discord Bots Nation">
+	  <meta property="og:url" content="https://discordbotsnation.glitch.me">
+	  <meta property="og:image" content="https://cdn.discordapp.com/attachments/437556497380147212/437992357393203202/Guild.png">
+	  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	  <link rel="stylesheet" href="https://discordbotsnation.glitch.me/april">
+  
+	  <style>
+		body{
+		  background: #3C434A;
+		  color: pink;
+		}
+		
+	  </style>
+	  
+	  <script>
+		var botNum = await https.get("https://discordbotsnation.glitch.me/api/bots/total");
+		botNum = JSON.parse(botNum);
+		console.log(botnum);
+		document.getElementById("botNum").innerHTML = botNum;
+	  </script>
+	</head>
+	<body>
+	  <div class="container">
+	  
+	  <!--<header id="navbar">
+		<a href="newbot" style="text-decoration:none;">
+		  <header id="newbot">
+			<span id="newbot-text">New Bot</span>
+		  </header>
+		</a>
+		<a href="/api/discord/login" style="text-decoration:none;">
+		  <header id="login">
+			<span id="login-text">Login</span>
+		  </header>
+		</a>
+	  </header>-->
+	  <!--
+	  <ul>
+		<li class="active"><a href="">Home</a></li>
+		<li><a href="newbot">New Bot</a></li>
+		<li style="float:right!important"><a href="/api/discord/login">Login</a></li>
+		<li><a href="/bots">Bots</a></li>
+		
+	  </ul>
+	-->
+  <nav class="navbar navbar-expand-sm bg-pink navbar-light fixed-top ">
+	<span id="title"><img src="https://cdn.discordapp.com/attachments/437196381472555008/437201560456658945/Dbots2.png" width="60px" height="60px" />&nbsp;</span>
+	<a class="navbar-brand" href="/">Discord Bots Nation</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"></span>
+	</button>
+  
+	<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+	  <ul class="navbar-nav mr-auto">
+		<li class="nav-item active">
+		  <a class="nav-link" href="/">Home</a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link" href="/newbot">Submit</a>
+		</li>
+		 <li class="nav-item">
+		   <a class="nav-link" href="/bots">Bots <span class="badge badge-secondary" id="botNum"></span></a>
+		</li>
+		<li class="nav-item">
+		  <a href="https://discord.gg/DqU2N4p" class="nav-link" taget="_blank">
+			Invite
+		  </a>
+		</li>
+		<li class="nav-item">
+		  <a href="/api/discord/login" class="nav-link" style="float:right!important">Login</a>
+		</li>
+			  <li class="nav-item">
+		  <a href="/credits" class="nav-link" taget="_blank">
+			Credits
+		  </a>
+		</li>
+		<style>
+		   /* Dropdown Button */
+  .dropbtn {
+	  padding: 16px;
+	  
+	  font-size: 14px;
+	  border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+	  position: top;
+	  display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+	  display: none;
+	  position: absolute;
+	  background-color: #f1f1f1;
+	  min-width: 100px;
+	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	  z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+	  color: black;
+	  padding: 5px 16px;
+	  text-decoration: none;
+	  display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+	  display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+	  background-color: #3e8e41;
+  } 
+		</style>
+		 <div class="dropdown">
+	<button class="dropbtn">Beta Things</button>
+	<div class="dropdown-content">
+	  <a href="/login">Admin Panel</a>
+	  <a href="/users">Bot Developers</a>
+	  <a href="/queue">Bots Queue</a>
+  
+	</div>
+  </div> 
+	  </ul>
+	  <form class="form-inline my-2 my-lg-0" action="/search" method="GET">
+		<input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" id="q" aria-label="Search">
+		<button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search a bot</button>
+	  </form>
+	</div>
+	  </nav><br><br><br><br>
+	  <h1>Cookies Policy</h1>
+  
+  <!-- Last updated: April 13, 2018 -->
+  
+  <p>By using our service you agree that this website uses cookies.</p>
+  
+  <p>Our Cookies Policy explains what cookies are, how we use cookies, how third-parties we may partner with may use cookies on the Service, your choices regarding cookies and further information about cookies.</p>
+  
+  <h2>What are cookies</h2>
+  
+  <p>Cookies are small pieces of text sent by your web browser by a website you visit. A cookie file is stored in your web browser and allows the Service or a third-party to recognize you and make your next visit easier and the Service more useful to you.</p>
+  
+  <p>Cookies can be "persistent" or "session" cookies. Persistent cookies remain on your personal computer or mobile device when you go offline, while session cookies are deleted as soon as you close your web browser.</p>
+  
+  <h2>How DiscordBots uses cookies</h2>
+  
+  <p>When you use and access the Service, we may place a number of cookies files in your web browser.</p>
+  
+  <p>We use cookies for the following purposes:</p>
+  
+  <ul>
+  <li>
+	  <p>To enable certain functions of the Service</p>
+	  
+	  <p>We use both session and persistent cookies on the Service and we use different types of cookies to run the Service:</p>
+  
+	  <p>Essential cookies. We may use essential cookies to authenticate users and prevent fraudulent use of user accounts.</p>
+  </li>
+  </ul>
+  
+  <h2>What are your choices regarding cookies</h2>
+  
+  <p>If you'd like to delete cookies or instruct your web browser to delete or refuse cookies, please visit the help pages of your web browser.</p>
+  
+  <p>Please note, however, that if you delete cookies or refuse to accept them, you might not be able to use all of the features we offer, you may not be able to store your preferences, and some of our pages might not display properly.</p>
+  
+  <ul>
+  <li>
+	  <p>For the Chrome web browser, please visit this page from Google: <a href="https://support.google.com/accounts/answer/32050">https://support.google.com/accounts/answer/32050</a></p>
+  </li>
+  <li>
+	  <p>For the Internet Explorer web browser, please visit this page from Microsoft: <a href="http://support.microsoft.com/kb/278835">http://support.microsoft.com/kb/278835</a></p>
+  </li>
+  <li>
+	  <p>For the Firefox web browser, please visit this page from Mozilla: <a href="https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored">https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored</a></p>
+  </li>
+  <li>
+	  <p>For the Safari web browser, please visit this page from Apple: <a href="https://support.apple.com/kb/PH21411?locale=en_US">https://support.apple.com/kb/PH21411?locale=en_US</a></p>
+  </li>
+  <li>
+	  <p>For any other web browser, please visit your web browser's official web pages.</p>
+  </li>
+  </ul>
+	  </div>
+	</body>
+  </html>

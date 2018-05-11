@@ -1,0 +1,37 @@
+{
+  "stand":"#7289DA",
+  "helpcommand":{
+    "desc":"helpcommand <@Bot>"
+  },
+  "set":{
+    "desc":"set <@Bot> <prefix | help | description> <value>",
+    "fin":"You successfully modified this bot."
+  },
+  "queue":{
+    "desc":"TBA",
+    "errors":{
+      "color":"RED",
+      "empty":"The queue is empty"
+    }
+  },
+  "delete":{
+    "desc":"delete <@bot>",
+    "delete":{
+      "color":"#7289DA",
+      "msg":"Bot deleted."
+    }
+  },
+  "token":{
+    "desc":"token <bot mention>"
+  },
+  "prefix":{
+    "desc":"prefix <@Bot>",
+    "color":"#7289DA"
+  },
+  "owner":{
+    "desc":"owner <bot mention>"
+  },
+  "verified":{
+    "desc":"verified <@bot> <add/remove>"
+  }
+}

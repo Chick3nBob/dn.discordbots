@@ -1,0 +1,228 @@
+<html>
+	<head>
+	  <title>Discord Bots Nation</title>
+	  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.discordapp.com/attachments/437233640343207936/438314441248079892/Guild.png">
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	  
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	  <meta name="viewport" content="width=device-width">
+	  <meta property="og:type" content="profile">
+	  <meta property="og:title" content="Discord Bots Nation">
+	  <meta property="og:url" content="https://discordbotsnation.glitch.me">
+	  <meta property="og:image" content="https://cdn.discordapp.com/attachments/437233640343207936/438314441248079892/Guild.png">
+	  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	  <link rel="stylesheet" href="https://discordbotsnation.glitch.me/april">
+
+    
+    <script>
+    window.addEventListener("scroll", function() {
+    if (window.scrollY > 50) {
+        $('.nav-link').fadeOut();
+        $('.navbar-brand').fadeOut();
+  
+    }
+    else {
+        $('.nav-link').fadeIn();
+        $('.navbar-brand').fadeOut();
+    }
+},false);
+    </script>
+	  <style>
+		body{
+		  background: #7289DA;
+      color: black;
+		}
+      /*ANIBORDER*/
+/*1*/
+  /*.aniBorder, .aniBorder::before, .aniBorder::after {
+    border-radius: 20px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+  }
+  .aniBorder {
+    width: 14rem; /* don't touch ok i fixed the login
+    margin: auto;
+    color: #FF0000;
+  }
+  .aniBorder::before, .aniBorder::after {
+    content: '';
+    z-index: -1;
+    margin: -1%;
+    box-shadow: inset 0 0 0 4px;
+    animation: clipMe 8s reverse infinite;
+  }
+  .aniBorder::before {
+    animation-delay: -4s;
+  }
+  @keyframes clipMe {
+    0%, 100% {
+      clip: rect(0px, 50px, 20px, 0px);
+    }
+    25% {
+      clip: rect(0px, 2px, 120px, 0px);
+    }
+    50% {
+      clip: rect(108px, 120px, 100px, 0px);
+    }
+    75% {
+      clip: rect(0px, 20px, 120px, 210px); /* HOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOT
+    }
+  }
+  *,
+  *::before,
+  *::after {
+    .box-shadow: 1px 2px 19px -2px purple; /* purple would look hot
+  }*/
+/*END OF 1*/
+	.card {
+		   transition: width 300ms ease;
+		   width: 14rem;
+       color: #000000;
+		   margin-left: 1rem; 
+		   margin-bottom: 1rem; 
+		   box-shadow: 1px 2px 19px -2px yellow;
+		}
+      
+		.card:hover {
+		  transition: width 300ms ease;
+		  width: 15rem;
+      color: #000000; /* your a retard the website restarts auto no need to restart*/
+		}
+		
+		.avatar {
+		  border-radius: 25%;
+		  size: 240px;
+		}
+		
+		.online{
+		  background-color: green;
+		  border-radius: 1px;
+		  positon: relative;
+		  left: 20px;
+		}
+			  .idle{
+		  background-color: gold;
+				border-radius: 1px;
+						positon: relative;
+		  left: 20px;
+		}
+			  .dnd{
+		  background-color: red;
+				border-radius: 1px;
+						positon: relative;
+		  left: 20px;
+		}
+		  .offline{
+		  background-color: grey;
+		  border-radius: 1px;
+		  positon: relative;
+		  left: 20px;
+		}
+      .servers{
+      background-color: white;
+		  border-radius: 0px;
+		  positon: relative;
+		  left: 20px;
+      }
+      
+	  </style>
+	  
+	  <script>
+		var botNum = await https.get("https://discordbotsnation.glitch.me/api/bots/total");
+		botNum = JSON.parse(botNum);
+		console.log(botnum);
+		document.getElementById("botNum").innerHTML = botNum;
+	  </script>
+	</head>
+	<body>
+	  <div id="bots" class="container" style="align: center;">
+		<nav class="navbar navbar-expand-sm bg-black navbar-light fixed-top ">
+	<span id="title"><img src="https://cdn.discordapp.com/attachments/437556497380147212/437992357393203202/Guild.png" width="60px" height="60px" />&nbsp;</span>
+	<a class="navbar-brand" href="/">Discord Bots Nation</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"></span>
+	</button>
+  
+	<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+	  <ul class="navbar-nav mr-auto">
+		<li class="nav-item">
+		  <a class="nav-link" href="/">Home</a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link" href="/newbot">Submit</a>
+		</li>
+		 <li class="nav-item active">
+		   <a class="nav-link" href="#">Bots<span class="sr-only">(current)</span></a>
+		</li>
+		<li class="nav-item">
+		  <a href="/api/discord/login" class="nav-link" style="float:right!important">Login</a>
+		</li>
+	  </ul>
+	  <form class="form-inline my-2 my-lg-0" action="/search" method="GET">
+		<input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" id="q" aria-label="Search">
+		<button class="btn btn-outline-info my-2 my-sm-1" type="submit">Search a bot</button>
+	  </form>
+	</div>
+		</nav>
+		<br><br><br><br>
+		
+	  </div>
+	           <div class="main-content">
+                        <div class="container" style="max-width: 1240px;">
+                            <div class="row">
+                                <% var added = 0; %>
+                                    <% for(var i=0; i<bots.length; i++) {%>
+                                        <% added++; %>
+                              <% if(bot.users.get(bots[i].id)) {%>
+                              <div class="card">
+                                                <img class="card-img-top avatar" src="https://discordbots.glitch.me/api/discord/avatar/<%= bots[i].id%>"
+                                                    alt="Bot Image">
+                                                <div class="card-body">
+
+
+                                                    <h5 class="card-title">
+                                                        <%= bots[i].name %>
+                                                    </h5>
+                                                  <%if (bot.users.get(bots[i].id).presence.status === 'idle') {%>
+                                                      <span class="badge badge-pill badge-warning">IDLE</span> 
+                                                  <%}%>
+                                                  <%if (bot.users.get(bots[i].id).presence.status === 'online') {%>
+                                                      <span class="badge badge-pill  badge-success">ONLINE</span> 
+                                                  <%}%>
+                                                  
+                                                  <%if (bot.users.get(bots[i].id).presence.status === 'dnd') {%>
+                                                      <span class="badge badge-pill badge-danger">DND</span> 
+                                                  <%}%>
+                                                  <%if (bot.users.get(bots[i].id).presence.status === 'offline') {%>
+                                                      <span class="badge badge-pill badge-light">OFFLINE</span>
+                                                  <%}%>
+                                                  
+                                                  <%if(bots[i].servers){%>
+                                                    <%if(bots[i].servers == 1) {%>
+                           
+                                                      <span class="badge badge-white"><%=bots[i].servers%> Server</span> 
+                                                    <%} else {%>
+                                                      <span class="badge badge-white"><%=bots[i].servers%> Servers</span> 
+                                                    <%}%>
+                                                  <%}%>
+                                                            
+                                                    <a href="/bots/<%= bots[i].id %>" class="btn btn-primary">View</a>
+                                                </div>
+                                            </div>
+                                            <% if(added == 5) {%>
+                                                <div class="w-100"></div>
+                                            <% added = 0; %>
+                                            <% } %>
+                                          <% } %>
+                                        <% } %>
+							  </div>
+						  </div>
+			  </div>
+		  </main>
+	</body>
+</html>

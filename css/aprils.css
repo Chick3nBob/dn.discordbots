@@ -1,0 +1,83 @@
+@keyframes mover {
+    0%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+
+@-webkit-keyframes mover {
+    0%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+
+body {
+  background-image: url('https://media.discordapp.net/attachments/437196381472555008/437201560456658945/Dbots2.png?width=473&height=473');
+}
+
+.card{
+   animation: mover 0.1s alternate infinite;
+}
+.navbar{
+  background-color: white;
+}
+img {
+   animation: mover 0.1s alternate infinite;
+}
+a {
+   animation: mover 0.1s alternate infinite;
+   background-color: red !important;
+}
+span {
+   animation: mover 0.1s alternate infinite;
+   background-color: red !important;
+} 
+
+@-moz-keyframes spin {
+  100%{
+    -moz-transform: rotate(-360deg);
+  }
+  0%{
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100%{
+    -moz-transform: rotate(-360deg);
+  }
+  0%{
+    -moz-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100%{
+    -moz-transform: rotate(-360deg);
+  }
+  0%{
+    -moz-transform: rotate(360deg);
+  }
+}
+img {
+   animation: spin 1s infinite alternate !important;
+}
+
+a {
+   animation: spin 5s infinite alternate !important;
+}
+
+p {
+   animation: spin 2s infinite alternate !important;
+}
+
+h1 {
+   animation: spin 0.5s infinite alternate !important;
+} 
+
+input {
+   animation: spin 0.5s infinite alternate !important;
+} 

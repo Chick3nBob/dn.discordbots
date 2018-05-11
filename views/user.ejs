@@ -1,0 +1,112 @@
+<html>
+	<head>
+	  <title><%=user.tag%>'s Profile | DBN</title>
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	  
+	  <style>
+			body{
+		    background: #7289DA; /* make icons */
+      }
+		
+			.user-avatar{
+		    width: 15%;
+		    height: auto;
+		    border-radius: 5%;
+	    }
+			.card {
+		     transition: width 300ms ease;
+		     width: 14rem;
+		     margin-left: 1rem; 
+		     margin-bottom: 1rem; 
+		     box-shadow: 1px 2px 19px -2px black;
+		  }
+			.card:hover {
+		    transition: width 300ms ease;
+		    width: 16rem;
+		  }
+		
+		  .avatar {
+		    border-radius: 50%;
+		    size: 240px;
+		  }
+	  </style>
+	</head>
+	<body>
+	  <div align="center">
+		<br>
+	  <img class="user-avatar" src="/api/discord/avatar/<%=user.id%>" style="size: 240px;">
+	  </div>
+	  <h2 align="center">
+		  <%=user.tag%>
+	  </h2>
+	  <div class="info">
+		
+		<%if(profile && profile.bio){%>
+		<p align="center" class="description">Description: <%= profile.bio %></p>
+		<%}else{%>
+		<p align="center" class="description">No Description!</p>
+		<%}%>
+	  </div>
+			<h5 align="center" class="bot-text">
+		  Bots
+		</h5>
+	  <div align="center" id="bots" style="color:black">
+		   <main>
+			  <div class="main-content">
+						  <div class="container" style="max-width: 1240px;">
+							  <div class="row">
+								  <% var added = 0; %>
+									  <% for(var i=0; i<bots.length; i++) {%>
+										  <% added++; %>
+								<% if(bot.users.get(bots[i].id)) {%>
+								<div class="card">
+												  <img class="card-img-top avatar" src="/api/discord/avatar/<%= bots[i].id %>"
+													  alt="Bot Image">
+												  <div class="card-body">
+  
+  
+													  <h5 class="card-title">
+														  <%= bots[i].name %>
+													  </h5>
+													<%if (bot.users.get(bots[i].id).presence.status === 'idle') {%>
+														<span class="badge badge-warning">Idle</span> 
+													<%}%>
+													<%if (bot.users.get(bots[i].id).presence.status === 'online') {%>
+														<span class="badge badge-success">Online</span> 
+													<%}%>
+													
+													<%if (bot.users.get(bots[i].id).presence.status === 'dnd') {%>
+														<span class="badge badge-danger">Dnd</span> 
+													<%}%>
+													<%if (bot.users.get(bots[i].id).presence.status === 'offline') {%>
+														<span class="badge badge-light">Offline</span>
+													<%}%>
+													
+													<%if(bots[i].servers){%>
+													  <%if(bots[i].servers == 1) {%>
+														<span class="badge badge-warning"><%=bots[i].servers%> Server</span> 
+													  <%} else {%>
+														<span class="badge badge-warning"><%=bots[i].servers%> Servers</span> 
+													  <%}%>
+													<%}%>
+															  
+													  <a href="/bots/<%= bots[i].id %>" class="btn btn-primary">View</a>
+												  </div>
+											  </div>
+											  <% if(added == 5) {%>
+												  <div class="w-100"></div>
+											  <% added = 0; %>
+											  <% } %>
+											<% } %>
+										  <% } %>
+							  </div>
+						  </div>
+			  </div>
+		  </main>      
+	  </div>
+	  
+	</body> 
+  </html>

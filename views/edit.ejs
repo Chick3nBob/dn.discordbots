@@ -1,0 +1,32 @@
+<html>
+	<head>
+	  <title>Edit a bot</title>
+		  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.discordapp.com/attachments/437240347286962198/437544625348149257/dbl.jpg">
+	  <link rel="stylesheet" type="text/css" href="../navbar.css">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	  <link rel="stylesheet" type="text/css" href="../newbot.css">
+	  <link rel="stylesheet" href="https://discordbotsnation.glitch.me/april">
+	</head>
+	<body>
+	  <h1 class="w3-center" style="color:white;" id="name"> <!-- `Edit ${bot.name}` -->
+		
+	  </h1>
+		  <a style=" position: Absolute; top: 20px; right 0px;" href="/" class="btn btn-primary" role="button">Back</a>
+	  
+	  <div class="container">
+		
+	  
+	  
+  
+	  
+	  <form action="/api/newbot" method="post" id="newboat" class="w3-center">
+		<input class="form-control" type="text" id="keyHere" name="key" style="width:0px;height:0px;visibility: hidden;"><br>
+		<input class="form-control" type="text" name="prefix" placeholder="Prefix"><br>
+		<input class="form-control" type="text" name="helpCommand" placeholder="Help Command"><br>
+		<input type="submit" class="btn btn-outline-success btn-block" value="Edit">
+	  </form>
+		<a type="submit" class="btn btn-outline-danger btn-block">DELETE</a>
+	  </div>
+	</body>
+  </html>  

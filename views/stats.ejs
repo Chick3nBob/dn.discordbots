@@ -1,0 +1,213 @@
+<html>
+	<head>
+	  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	  <title>DiscordBots - Stats</title>
+	  <link rel="stylesheet" href="https://discordbots.glitch.me/april">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	  <link rel="stylesheet" href="https://discordbots.glitch.me/april">
+	</head>
+	<style>
+	</style>
+	<body style="background-color: #7289DA;">
+	  <div id="info">
+	  </div>
+	   <div id="bots" class="container" style="align: center;">
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top ">
+	<span id="title"><img src="https://media.discordapp.net/attachments/437196381472555008/437201560456658945/Dbots2.png?width=473&height=473" width="60px" height="60px" />&nbsp;</span>
+	<a class="navbar-brand" href="/">Discord Bots Nation</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"></span>
+	</button>
+  
+	<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+	  <ul class="navbar-nav mr-auto">
+		<li class="nav-item">
+		  <a class="nav-link" href="/">Home</a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link" href="/newbot">Submit</a>
+		</li>
+		 <li class="nav-item active">
+		   <a class="nav-link" href="/bots">Bots <span class="sr-only">(current)</span></a>
+		</li>
+		<li class="nav-item">
+		  <a href="/api/discord/login" class="nav-link" style="float:right!important">Login</a>
+		</li>
+	  </ul>
+	  <form class="form-inline my-2 my-lg-0" action="/search" method="GET">
+		<input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" id="q" aria-label="Search">
+		<button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search a bot</button>
+	  </form>
+	</div>
+		</nav>
+		<br><br><br><br>
+		<font color ="white">
+	<!--  <script>
+			function httpGet(theUrl, callback) {
+			  $.ajax({
+				type: "GET",
+				url: theUrl,
+				dataType: 'json',
+				async: true,
+				}).then(data => {
+				  callback(data);
+				});
+			}
+  
+		httpGet('/api/bots/total', data => {
+		  var info = document.getElementById('info')
+		  info.innerHTML = 'We have: ' + data.total + ' bots'
+		  
+		})
+	  </script>
+		  -->
+		  <style>
+  .btn {
+	  border: 10px;
+	  background-color: inherit;
+	  padding: 20px 50px;
+	  font-size: 25px;
+	  cursor: pointer;
+	  display: inline-block;
+  }
+  
+  .primary {
+	background-color: #37A1E8;
+	color:white;
+  }
+  
+  .primary:hover {
+	background-color: #37A1E8;
+	color:white;
+  }
+  
+  /* Green */
+  .success {
+	  background-color: #4CAF50;
+	  color:white;
+  }
+  
+  .success:hover {
+	  background-color: #4CAF50;
+	  color: white;
+  }
+  
+  
+  /* Blue */
+  .info {
+	  color: dodgerblue;
+  }
+  
+  .info:hover {
+	  background: #2196F3;
+	  color: white;
+  }
+  
+  /* Orange */
+  .warning {
+	  background: #ff9800;
+	  color: white;
+  }
+  
+  .warning:hover {
+	  background: #ff9800;
+	  color: white;
+  }
+  
+  /* Red */
+  .danger {
+	  background-color: #f44336;
+	  color:white;
+  }
+  
+		  
+  .danger:hover {
+	  background: #f44336;
+	  color: white;
+  }
+  
+  
+  /* light blue */
+  .secondary {
+			  color: white;
+			  border-radius: 4px;
+			  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  }
+  .secondary {
+			  background: rgb(66, 184, 221); /* this is a light blue */
+  }
+  </style>
+  <center>
+	<br>
+		  <h1>
+			Bots in website
+		  </h1>
+  
+		  <script>
+		  httpGet('/api/bots/total', data => {
+		  var info = document.getElementById('info')
+		  info.innerHTML = data.total
+		  
+		  })
+		  </script>
+  
+		  <button class="btn primary">
+		   46
+		  </button>
+		   <h1>
+			Users in Discord
+		  </h1>
+		   <button class="btn secondary">10</button>
+		  <h1>
+			Bots in Discord
+		  </h1>
+		  <button class="btn warning">3</button>
+		  <h1>
+			Humans in Discord
+		  </h1>
+		  <button class="btn success">
+			8
+		  </button>
+		  <h1>
+			API Version
+		  </h1>
+		  <button class = "btn danger">V1</button>
+		  </center>
+		  
+		  
+		  <style>
+		  .btn2 {
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	-webkit-border-radius: 18;
+	-moz-border-radius: 18;
+	border-radius: 18px;
+	text-shadow: 6px 5px 6px #666666;
+	font-family: Georgia;
+	color: #ffffff;
+	font-size: 33px;
+	padding: 31px 32px 32px 33px;
+	border: solid #1f628d 5px;
+	text-decoration: none;
+  }
+  
+  .btn:hover {
+	background: #3cb0fd;
+	background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+	text-decoration: none;
+  }
+  </style>
+		</font>
+	</body>
+  </html>

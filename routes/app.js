@@ -59,7 +59,7 @@ router.get("/login", (req, res) => {
 });
 
 router.get("/queue", (req, res) => {
-  fetch('https://discordbots.glitch.me/api/discord/user/?code=' + req.query.code).then(response => {
+  fetch('https://discordbotsnation1.glitch.me/api/discord/user/?code=' + req.query.code).then(response => {
         response.json().then(body => {
       if(body.id && bot.users.get(body.id)){
         
@@ -156,7 +156,7 @@ const redirect = encodeURIComponent('http://discordbots.glitch.me/login/callback
 
 
 router.get('/panel', (req, res) => {
-  const url = "https://discordbots.glitch.me/api/discord/user/?code=" + req.query.code;
+  const url = "https://discordbotsnation1.glitch.me/api/discord/user/?code=" + req.query.code;
 
 
 router.get(url, result => {
@@ -255,6 +255,10 @@ router.get("/approved", (req, res) => {
   res.render('approved.ejs');
 });
 
+router.get("/indexloggedin", (req, res) => {
+  res.render('indexloggedin.ejs');
+});
+
 router.get("/declined", (req, res) => {
   res.render('declined.ejs');
 });
@@ -328,6 +332,10 @@ router.get("/404", (req, res)  => {
     res.render('404.ejs');
 });
 
+router.get("/profile", (req, res)  => {
+    res.render('profile.ejs');
+});
+
 router.get("/503", (req, res) => {
     res.render('503.ejs');
 });
@@ -345,11 +353,11 @@ router.get('/search', (req, res) => {
 });
 
 router.get("/decline/:id", (req, res) => {
-  fetch('https://discordbots.glitch.me/api/discord/user/?code=' + req.query.code).then(response => {
+  fetch('https://discordbotsnation1.glitch.me/api/discord/user/?code=' + req.query.code).then(response => {
         response.json().then(body => {
       if(body.id && bot.users.get(body.id)){
         
-        if(bot.guilds.get('437196655981594282').members.get(body.id)&&bot.guilds.get('437196655981594282').members.get(body.id).roles.find('name', 'Moderator')){
+        if(bot.guilds.get('437196655981594282').members.get(body.id)&&bot.guilds.get('437196655981594282').members.get(body.id).roles.find('name', 'Moderators')){
                res.render('decline.ejs', {DB: process.DB, bot: bot, req: req}); 
         }else{
           res.send('404 not found');
@@ -371,7 +379,7 @@ router.get("/decline/:id/do", (req, res) => {
     reason = req.query.reason;
   }
   
-  res.redirect(`https://discordbots.glitch.me/api/decline/${req.params.id}/?code=${req.query.code}&reason=${reason}`);
+  res.redirect(`https://discordbotsnation1.glitch.me/api/decline/${req.params.id}/?code=${req.query.code}&reason=${reason}`);
 });
 
 router.get('/users/:id', (req, res) => {

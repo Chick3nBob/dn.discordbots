@@ -10,10 +10,10 @@
 	  <meta name="viewport" content="width=device-width">
 	  <meta property="og:type" content="profile">
 	  <meta property="og:title" content="Discord Bots Nation">
-	  <meta property="og:url" content="https://discordbotsnation.glitch.me">
+	  <meta property="og:url" content="https://discordbots.glitch.me">
 	  <meta property="og:image" content="https://cdn.discordapp.com/attachments/437233640343207936/438314441248079892/Guild.png">
 	  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	  <link rel="stylesheet" href="https://discordbotsnation.glitch.me/april">
+	  <link rel="stylesheet" href="https://discordbots.glitch.me/april">
 
     
     <script>
@@ -133,7 +133,7 @@
 	  </style>
 	  
 	  <script>
-		var botNum = await https.get("https://discordbotsnation.glitch.me/api/bots/total");
+		var botNum = await https.get("https://discordbots.glitch.me/api/bots/total");
 		botNum = JSON.parse(botNum);
 		console.log(botnum);
 		document.getElementById("botNum").innerHTML = botNum;
@@ -180,7 +180,7 @@
                                         <% added++; %>
                               <% if(bot.users.get(bots[i].id)) {%>
                               <div class="card">
-                                                <img class="card-img-top avatar" src="https://discordbots.glitch.me/api/discord/avatar/<%= bots[i].id%>"
+                                                <img class="card-img-top avatar" src="https://discordbotsnation1.glitch.me/api/discord/avatar/<%= bots[i].id%>"
                                                     alt="Bot Image">
                                                 <div class="card-body">
 

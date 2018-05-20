@@ -22,7 +22,7 @@ router.post('/', (req, res) => {
   const https = require("https");
 
 const url =
-  "https://discordbotsnation.glitch.me/api/discord/user/?code=" + req.body.key;
+  "https://discordbotsnation1.glitch.me/api/discord/user/?code=" + req.body.key;
 
 https.get(url, result => {
   result.setEncoding("utf8");
@@ -31,7 +31,7 @@ https.get(url, result => {
     body += data;
   });
   result.on("end", () => {
-    if(body == 'no') return res.redirect('https://discordbotsnation.glitch.me/api/discord/login');
+    if(body == 'no') return res.redirect('https://discordbotsnation1.glitch.me/api/discord/login');
     body = JSON.parse(body);
     // console.log(body);
     const guild = client.guilds.get('437196655981494282');

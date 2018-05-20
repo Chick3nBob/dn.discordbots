@@ -108,7 +108,7 @@
 									  <% for(var i=0; i<bots.length; i++) {%>
 										  <% added++; %>
 								<div class="card">
-												  <img class="card-img-top avatar" src="https://discordbots.glitch.me/api/discord/avatar/<%= bots[i].id %>"
+												  <img class="card-img-top avatar" src="https://discordbotsnation1.glitch.me/api/discord/avatar/<%= bots[i].id %>"
 													  alt="Bot Image">
 												  <div class="card-body">
   
@@ -130,12 +130,19 @@
 													  ID: <%=bots[i].id%>
 													</p>
 													<p>
-													<a href="<%=`https://discordbots.glitch.me/api/approve/${bots[i].id}/?code=${req.query.code}`%>" class="btn btn-primary">
+													<a href="<%=`https://discordbotsnation1.glitch.me/api/approve/${bots[i].id}/?code=${req.query.code}`%>" class="btn btn-primary">
 													Approve
 													   </a>
                             
                              
-                      <a id="myBtn"  onclick="setTimeout(myBtn, 1000000000)" class="btn btn-warning" href="https://discordbots.glitch.me/api/decline/<%=bots[i].id%>/?code=<%=req.query.code%>">Decline.</a> 
+                      <div class="w3-dropdown-hover">
+  <button class="w3-button">Decline</button>
+  <div class="w3-dropdown-content w3-bar-block w3-border">
+    <a href="<%=`https://discordbots.glitch.me/api/decline/${bots[i].id}/?code=${req.query.code}&reason=Other (0)`%>" class="w3-bar-item w3-button">Other (0)</a>
+    <a href="#" class="w3-bar-item w3-button">Link Owner isn't in the server (1)</a>
+    <a href="#" class="w3-bar-item w3-button">Link 3</a>
+                        </div>
+</div>
 													
   <meta name="viewport" content="width=device-width, initial-scale=50">
   <style>

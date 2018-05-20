@@ -13,7 +13,7 @@ let bot = new Discord.Client();
 
 bot.on('ready', () => {
   console.log('Bot up and running!');
-  bot.user.setActivity('discordbotsnation.glitch.me | db,help', {type: 'watching'});
+  bot.user.setActivity('discordbotsnation1.glitch.me | db,help', {type: 'watching'});
 }); 
  
 function updateJSON(data){
@@ -47,6 +47,7 @@ bot.on('message', message => {
   if(message.content.substr(0, prefix.length) != prefix) return;
   let args = message.content.split(" ");
   const evalargs = message.content.split(" ").slice(1);
+
   let command = args[0];
   command = command.slice(prefix.length).toLowerCase();
   args = args.slice(1);
@@ -80,8 +81,8 @@ Owners: ${queuedBot.owner.join(', ')}
 Prefix: **${queuedBot.prefix}** 
 Help command: **${queuedBot.hc}**
 Invite: [Click!](${`https://discordapp.com/oauth2/authorize/?permissions=0&scope=bot&client_id=${queuedBot.id}`})
-GitHub Repo: ${queuedBot.git}
-Website: ${queuedBot.website}
+GitHub Repo: [Click!](${queuedBot.git})
+Website: [Click!](${queuedBot.website})
 `)
         embed.addBlankField(false);
         // out += '+ Bot name: ' + queuedBot.name + " (" + queuedBot.prefix + " | " + queuedBot.hc + ") – Owner: " + queuedBot.owner.join(", ") + `\n- Invite https://discordapp.com/oauth2/authorize?client_id=${queuedBot.id}&scope=bot&permissions=0\n`;

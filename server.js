@@ -27,7 +27,7 @@ let token = process.env.TOKENE;
 [1,2,3].forEach(nothin => {
   token = Buffer.from(token, 'base64').toString('ascii');
 });
-process.env.TOKEN = token;
+process.env.TOKENE = token;
 
 
 const requests = require('./routes/app.js'); // When requiring files like these, they dont need .js // ah no?

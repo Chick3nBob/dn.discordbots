@@ -25,7 +25,11 @@
     "generate-password": "^1.4.0",
     "ejs-lint": "^0.3.0",
     "consoled": "^1.2.2",
-    "chalk": "^2.4.0"
+    "chalk": "^2.4.0",
+    "knex": "^0.14.6"
+  },
+  "engines": {
+    "node": "6.13.1a"
   },
   "repository": {
     "url": "https://glitch.com/edit/#!/my-glitch-app"

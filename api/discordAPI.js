@@ -7,7 +7,7 @@ const router = express.Router();
 
 const CLIENT_ID = process.env.CLIENT_ID
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
-const redirect = encodeURIComponent('http://discordbotsnation.glitch.me/api/discord/callback');
+const redirect = encodeURIComponent('http://discordbotsnation1.glitch.me/api/discord/callback');
 
 
 router.get('/login', (req, res) => {

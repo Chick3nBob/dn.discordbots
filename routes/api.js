@@ -82,7 +82,7 @@ router.get('/approve/:id', (req, res) => {
     res.send('Doesn\'t exist!');
   }else{
    let bot = process.bot;
-      fetch('https://discordbots.glitch.me/api/discord/user/?code=' + req.query.code).then(response => {
+      fetch('https://discordbotsnation1.glitch.me/api/discord/user/?code=' + req.query.code).then(response => {
     response.json().then(body => {
       if(body.id && bot.users.get(body.id)){
         
@@ -127,7 +127,7 @@ router.get('/decline/:id', (req, res) => {
     res.send('Doesn\'t exist!');
   }else{
    let bot = process.bot;
-      fetch('https://discordbots.glitch.me/api/discord/user/?code=' + req.query.code).then(response => {
+      fetch('https://discordbotsnation1.glitch.me/api/discord/user/?code=' + req.query.code).then(response => {
     response.json().then(body => {
       if(body.id && bot.users.get(body.id)){
         

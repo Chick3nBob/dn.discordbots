@@ -1,6 +1,33 @@
 {
   "queue": [],
-  "bots": [],
+  "bots": [
+    {
+      "id": "428245608445378570",
+      "name": "Goku#3252",
+      "prefix": "gu!",
+      "hc": "gu!help",
+      "owner": [
+        "282088833082720256"
+      ],
+      "desc": "A very good moderation bot and more to come soon",
+      "git": "",
+      "website": "",
+      "support": ""
+    },
+    {
+      "id": "426864182798057472",
+      "name": "TeddyBear#8830",
+      "prefix": "&",
+      "hc": "&help",
+      "owner": [
+        "366931595363614721"
+      ],
+      "desc": "Teddy Bear💖. Lovely Moderation Bot",
+      "git": "",
+      "website": "",
+      "support": "https://discord.gg/358uVrN"
+    }
+  ],
   "users": [],
   "certifyQueue": []
 }
